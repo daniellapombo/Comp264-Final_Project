@@ -24,7 +24,7 @@ bashList = bash.split("\\")
 bash = bashList[0]
 bash = float(bash)
 
-addEntry = ("INSERT INTO Temperature (Degrees, Time, Date) VALUES (%(bash)s, %(now)s, %(today)s)")
+addEntry = ("INSERT INTO Temperature (Degrees, Date) VALUES (%(bash)s, now())")
 
 variables = {
 	'bash': bash,
